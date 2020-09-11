@@ -18,7 +18,7 @@ spec:
       - name: chaincodeupgrade1
         image: hyperledger/fabric-tools:1.3.0
         imagePullPolicy: Always
-        command: ["sh", "-c", "echo $GOPATH; mkdir -p $GOPATH/src/github.com/lgsvl; cp -r /shared/artifacts/chaincode $GOPATH/src/github.com/lgsvl; $GOPATH/src/github.com/lgsvl; peer chaincode upgrade -o ${ORDERER_URL} -C ${CHANNEL_NAME} -n ${CHAINCODE_NAME} -v ${CHAINCODE_VERSION} -p github.com/lgsvl/data-marketplace-chaincode -c '{\"Args\":[\"init\",\"dmpoken\",\"10000\"]}'"]
+        command: ["sh", "-c", "echo $GOPATH; mkdir -p $GOPATH/src/github.com/alcarria; cp -r /shared/artifacts/chaincode $GOPATH/src/github.com/alcarria; $GOPATH/src/github.com/alcarria; peer chaincode upgrade -o ${ORDERER_URL} -C ${CHANNEL_NAME} -n ${CHAINCODE_NAME} -v ${CHAINCODE_VERSION} -p github.com/alcarria/data-marketplace-chaincode -c '{\"Args\":[\"init\",\"dmpoken\",\"10000\"]}'"]
         env:
         - name: CHANNEL_NAME
           value: dmp
@@ -45,7 +45,7 @@ spec:
       - name: chaincodeupgrade2
         image: hyperledger/fabric-tools:1.3.0
         imagePullPolicy: Always
-        command: ["sh", "-c", "echo $GOPATH; mkdir -p $GOPATH/src/github.com/lgsvl; cp -r /shared/artifacts/chaincode $GOPATH/src/github.com/lgsvl; $GOPATH/src/github.com/lgsvl; peer chaincode upgrade -o ${ORDERER_URL} -C ${CHANNEL_NAME} -n ${CHAINCODE_NAME} -v ${CHAINCODE_VERSION} -p github.com/lgsvl/data-marketplace-chaincode -c '{\"Args\":[\"init\",\"dmpoken\",\"10000\"]}'"]
+        command: ["sh", "-c", "echo $GOPATH; mkdir -p $GOPATH/src/github.com/alcarria; cp -r /shared/artifacts/chaincode $GOPATH/src/github.com/alcarria; $GOPATH/src/github.com/alcarria; peer chaincode upgrade -o ${ORDERER_URL} -C ${CHANNEL_NAME} -n ${CHAINCODE_NAME} -v ${CHAINCODE_VERSION} -p github.com/alcarria/data-marketplace-chaincode -c '{\"Args\":[\"init\",\"dmpoken\",\"10000\"]}'"]
         env:
         - name: CHANNEL_NAME
           value: dmp

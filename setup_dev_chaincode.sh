@@ -31,7 +31,9 @@ done
 echo -e "${pod} is now ${podSTATUS}"
 echo -e "\nStarting to copy chaincode in persistent volume."
 
-kubectl cp $GOPATH/src/pse-gitlab.lgsvl.net/data_marketplace/data-marketplace-chaincode $pod:/shared/artifacts/chaincode/data-marketplace-chaincode -n dev
+#kubectl cp $GOPATH/src/pse-gitlab.lgsvl.net/data_marketplace/data-marketplace-chaincode $pod:/shared/artifacts/chaincode/data-marketplace-chaincode -n dev
+kubectl cp $GOPATH/src/github.com/alcarria/data-marketplace-chaincode $pod:/shared/artifacts/chaincode/data-marketplace-chaincode -n dev
+
 
 echo "Waiting for 10 more seconds for copying chaincode to avoid any network delay"
 sleep 10

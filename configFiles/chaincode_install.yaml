@@ -18,7 +18,7 @@ spec:
       - name: chaincodeinstall1
         image: hyperledger/fabric-tools:1.3.0
         imagePullPolicy: Always
-        command: ["sh", "-c", "echo $GOPATH ;mkdir -p $GOPATH/src/github.com/lgsvl; cp -r /shared/artifacts/chaincode/data-marketplace-chaincode $GOPATH/src/github.com/lgsvl/; ls $GOPATH/src/github.com/lgsvl; peer chaincode install -n ${CHAINCODE_NAME} -v ${CHAINCODE_VERSION} -p github.com/lgsvl/data-marketplace-chaincode/"]
+        command: ["sh", "-c", "echo $GOPATH ;mkdir -p $GOPATH/src/github.com/alcarria; cp -r /shared/artifacts/chaincode/data-marketplace-chaincode $GOPATH/src/github.com/alcarria/; ls $GOPATH/src/github.com/alcarria; peer chaincode install -n ${CHAINCODE_NAME} -v ${CHAINCODE_VERSION} -p github.com/alcarria/data-marketplace-chaincode/"]
         env:
         - name: CHAINCODE_NAME
           value: "dmp"
@@ -41,7 +41,7 @@ spec:
       - name: chaincodeinstall2
         image: hyperledger/fabric-tools:1.3.0
         imagePullPolicy: Always
-        command: ["sh", "-c", "echo $GOPATH; mkdir -p $GOPATH/src/github.com/lgsvl; cp -r /shared/artifacts/chaincode/data-marketplace-chaincode $GOPATH/src/github.com/lgsvl; ls $GOPATH/src/github.com/lgsvl; peer chaincode install -n ${CHAINCODE_NAME} -v ${CHAINCODE_VERSION} -p github.com/lgsvl/data-marketplace-chaincode/"]
+        command: ["sh", "-c", "echo $GOPATH; mkdir -p $GOPATH/src/github.com/alcarria; cp -r /shared/artifacts/chaincode/data-marketplace-chaincode $GOPATH/src/github.com/alcarria; ls $GOPATH/src/github.com/alcarria; peer chaincode install -n ${CHAINCODE_NAME} -v ${CHAINCODE_VERSION} -p github.com/alcarria/data-marketplace-chaincode/"]
         env:
         - name: CHAINCODE_NAME
           value: "dmp"

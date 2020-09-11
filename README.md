@@ -1,7 +1,7 @@
 # Data Marketplace on top of Hyperledger Fabric
 Notice: This document is heavily inspired from [an IBM tutorial](https://github.com/IBM/blockchain-network-on-kubernetes#4-deploy-hyperledger-fabric-network-into-kubernetes-cluster).
 
-You need to have the [data marketplace chaincode](https://github.com/lgsvl/data-marketplace-chaincode) correctly setup in your Go Path.
+You need to have the [data marketplace chaincode](https://github.com/alcarria/data-marketplace-chaincode) correctly setup in your Go Path.
 
 # Deploy the Blockchain network using Kubernetes APIs
 
@@ -39,7 +39,7 @@ This pattern provides a script which automatically provisions a sample Hyperledg
 
 Clone or download the Kubernetes configuration scripts to your user home directory.
   ```
-  $ git clone https://github.com/lgsvl/data-marketplace-hyperledger-fabric.git
+  $ git clone https://github.com/alcarria/data-marketplace-hyperledger-fabric.git
   ```
 
 Navigate to the source directory

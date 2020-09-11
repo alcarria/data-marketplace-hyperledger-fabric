@@ -32,16 +32,22 @@ echo -e "\nStarting to copy chaincode in persistent volume."
 
 #fix for this script to work on icp and ICS
 
-kubectl cp $GOPATH/src/pse-gitlab.lgsvl.net/data_marketplace/data-marketplace-chaincode/utils $pod:/shared/artifacts/chaincode/data-marketplace-chaincode/ -n dev
+#kubectl cp $GOPATH/src/pse-gitlab.lgsvl.net/data_marketplace/data-marketplace-chaincode/utils $pod:/shared/artifacts/chaincode/data-marketplace-chaincode/ -n dev
+#echo -e "\nStarting to copy chaincode in persistent volume.1..."
+#kubectl cp $GOPATH/src/pse-gitlab.lgsvl.net/data_marketplace/data-marketplace-chaincode/resources $pod:/shared/artifacts/chaincode/data-marketplace-chaincode/ -n dev
+#echo -e "\nStarting to copy chaincode in persistent volume.2..."
+#kubectl cp $GOPATH/src/pse-gitlab.lgsvl.net/data_marketplace/data-marketplace-chaincode/META-INF $pod:/shared/artifacts/chaincode/data-marketplace-chaincode/ -n dev
+#echo -e "\nStarting to copy chaincode in persistent volume. 3..."
+#kubectl cp $GOPATH/src/pse-gitlab.lgsvl.net/data_marketplace/data-marketplace-chaincode/data_marketplace_chaincode.go $pod:/shared/artifacts/chaincode/data-marketplace-chaincode/data_marketplace_chaincode.go -n dev
+
+
+kubectl cp $GOPATH/src/github.com/alcarria/data-marketplace-chaincode/utils $pod:/shared/artifacts/chaincode/data-marketplace-chaincode/ -n dev
 echo -e "\nStarting to copy chaincode in persistent volume.1..."
-kubectl cp $GOPATH/src/pse-gitlab.lgsvl.net/data_marketplace/data-marketplace-chaincode/resources $pod:/shared/artifacts/chaincode/data-marketplace-chaincode/ -n dev
+kubectl cp $GOPATH/src/github.com/alcarria/data-marketplace-chaincode/resources $pod:/shared/artifacts/chaincode/data-marketplace-chaincode/ -n dev
 echo -e "\nStarting to copy chaincode in persistent volume.2..."
-kubectl cp $GOPATH/src/pse-gitlab.lgsvl.net/data_marketplace/data-marketplace-chaincode/META-INF $pod:/shared/artifacts/chaincode/data-marketplace-chaincode/ -n dev
+kubectl cp $GOPATH/src/github.com/alcarria/data-marketplace-chaincode/META-INF $pod:/shared/artifacts/chaincode/data-marketplace-chaincode/ -n dev
 echo -e "\nStarting to copy chaincode in persistent volume. 3..."
-kubectl cp $GOPATH/src/pse-gitlab.lgsvl.net/data_marketplace/data-marketplace-chaincode/data_marketplace_chaincode.go $pod:/shared/artifacts/chaincode/data-marketplace-chaincode/data_marketplace_chaincode.go -n dev
-
-
-
+kubectl $GOPATH/src/github.com/alcarria/data-marketplace-chaincode/data_marketplace_chaincode.go $pod:/shared/artifacts/chaincode/data-marketplace-chaincode/data_marketplace_chaincode.go -n dev
 
 
 echo "Waiting for 10 more seconds for copying artifacts to avoid any network delay"
